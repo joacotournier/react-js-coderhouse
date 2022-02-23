@@ -1,0 +1,40 @@
+$colorPrimario: red;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin background() {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#app {
+  background: $colorPrimario;
+  nav {
+    background: #fff;
+    ul {
+      li {
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+footer {
+  background: #fff;
+  padding: 3rem;
+  text-align: center;
+  @include background(https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);;
+}
