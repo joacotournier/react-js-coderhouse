@@ -1,10 +1,14 @@
 import NavBar from "./NavBar";
 import ItemListContainer from "./ItemListContainer";
+import Container from "@mui/material/Container";
 
 function App() {
   return (
     <>
-      <NavBar name="Horacio"/>
+      <NavBar />
+      <Container maxWidth="lg">
+        <ItemListContainer heading="Trending Now" />
+      </Container>
     </>
   );
 }
