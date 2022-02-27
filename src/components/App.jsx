@@ -1,9 +1,10 @@
-import Header from "./Header"
+import NavBar from "./NavBar";
+import ItemListContainer from "./ItemListContainer";
 
 function App() {
   return (
     <>
-     <Header />
+      <NavBar name="Horacio"/>
     </>
   );
 }

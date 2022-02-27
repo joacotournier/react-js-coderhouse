@@ -1,9 +1,12 @@
-export const NavBar = () => {
+import CartWidget from './CartWidget';
+
+export const NavBar = (props) => {
+  console.table(props);
   return (
     <header>
       <nav>
         <ul>
-          <li></li>
+          <li>hello {props.name}</li>
           <li></li>
         </ul>
       </nav>
