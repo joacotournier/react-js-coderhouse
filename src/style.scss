@@ -60,6 +60,12 @@ h1 {
   }
 }
 
+.cart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 html,
 body,
 #app {

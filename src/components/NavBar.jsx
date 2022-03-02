@@ -1,6 +1,6 @@
 import CartWidget from "./CartWidget";
-import ShoppingCart2Fill from "remixicon-react/ShoppingCart2FillIcon";
 import Container from "@mui/material/Container";
+import { useState } from "react";
 
 export const NavBar = (props) => {
   return (
@@ -9,7 +9,7 @@ export const NavBar = (props) => {
         <Container maxWidth="lg">
           <div className="nav-wrapper">
             <div className="logo" />
-            <ShoppingCart2Fill color="#333333" />
+            <CartWidget />
           </div>
         </Container>
       </nav>
