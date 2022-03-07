@@ -11,3 +11,20 @@ const [counter, setCounter] = useState(0);
 <button onClick={restar}>MENOS</button>
 
 <p>{counter}</p>
+
+//  try { const data = await getList(list, 2000); setItems(data); setLoading(false); catch (e) { console. log(e);
+
+  return (
+    <>
+    <header>
+      <h1>{props.heading}</h1>
+      <ul>
+        {items.map((item) => (
+          <li key={item.id}>
+            <Item item={item} />
+          </li>
+        ))}
+      </ul>
+      </header>
+    </>
+  );
