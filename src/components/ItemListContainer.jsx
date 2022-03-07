@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ItemCount } from "./ItemCount";
+import { ItemList } from "./ItemList";
 export const ItemListContainer = (props) => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -31,14 +32,7 @@ export const ItemListContainer = (props) => {
       <div>
         <h2>{props.heading}</h2>
         <ItemCount />
-        <ul>
-          {items.map((item) => (
-            <li key={item.id}>
-              <img src={item.thumbnail} alt={item.title} />
-              <p>{item.title}</p>
-            </li>
-          ))}
-        </ul>
+        <ItemList items={items} />
       </div>
     );
     /*

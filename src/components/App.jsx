@@ -13,7 +13,7 @@ function App() {
       <NavBar />
       <Container maxWidth="lg">
         <ItemListContainer heading="Trending Now" />
-        <button onClick={handleClick}>ADD TO CART</button>
+        <button onClick={handleClick}>TREAT YOURSELF</button>
       </Container>
     </>
   );

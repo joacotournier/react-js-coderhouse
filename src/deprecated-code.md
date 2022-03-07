@@ -28,3 +28,5 @@ const [counter, setCounter] = useState(0);
       </header>
     </>
   );
+
+ const data = fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${props.heading}`)
