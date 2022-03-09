@@ -31,7 +31,7 @@ export const ItemListContainer = (props) => {
     return (
       <div>
         <h2>{props.heading}</h2>
-        <ItemCount />
+        <ItemCount stock={5} initial={1}/>
         <ItemList items={items} />
       </div>
     );
