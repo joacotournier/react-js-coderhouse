@@ -12,8 +12,8 @@ const [counter, setCounter] = useState(0);
 
 <p>{counter}</p>
 
-//  try { const data = await getList(list, 2000); setItems(data); setLoading(false); catch (e) { console. log(e);
 
+//  try { const data = await getList(list, 2000); setItems(data); setLoading(false); catch (e) { console. log(e);
   return (
     <>
     <header>
@@ -30,3 +30,18 @@ const [counter, setCounter] = useState(0);
   );
 
  const data = fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${props.heading}`)
+
+---
+
+const promesa = new Promise ((res, ref) => {
+setTimeout(() =>
+res(productosIniciales)
+}, 3000)
+
+promesa
+then( (respuestaDeLaApi) n
+setProductos(productosIniciales)
+• catch( (errorDelaApi) Cy
+console.log(errorDeLaApi)
+. finally(() => {
+setLoading(false)
