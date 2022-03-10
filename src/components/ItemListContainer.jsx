@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ItemCount } from "./ItemCount";
-import { ItemList } from "./ItemList";
+import { ItemDetailContainer } from "./ItemDetailContainer";
 
 export const ItemListContainer = (props) => {
   const [items, setItems] = useState([]);
@@ -16,7 +16,7 @@ export const ItemListContainer = (props) => {
     fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${id}`)
       .then((response) => response.json())
       .then((data) => {
-        setItems(data.results);
+        setItems(data.results.slice(0, 3));
       })
       .catch(() => {
         toast.error("Error loading items");
@@ -29,7 +29,7 @@ export const ItemListContainer = (props) => {
     <div>
       <h2>{props.heading}</h2>
       <ItemCount stock={5} initial={1} />
-      <ItemList items={items} />
+      <ItemDetailContainer items={items} />
     </div>
   );
 };
