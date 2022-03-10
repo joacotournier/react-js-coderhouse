@@ -45,3 +45,7 @@ setProductos(productosIniciales)
 console.log(errorDeLaApi)
 . finally(() => {
 setLoading(false)
+
+const handleClick = () => {
+  console.log("clicked");
+};

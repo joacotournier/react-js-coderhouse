@@ -3,7 +3,7 @@ function Item ({title, price, img}){
     <div>
         <span>{title}</span>
         <div>
-            ‹img src={img} alt={title} />
+            <img src={img} alt={title}></img>
         </div>
         <p>{price}</p>
     </div>

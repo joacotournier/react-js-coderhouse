@@ -28,6 +28,12 @@ $colorPrimario: rgb(82, 114, 255);
   justify-content: space-between;
   align-items: center;
   padding: 40px 40px;
+  a {
+    color: #000;
+    &.active {
+      color: $colorPrimario;
+    }
+  }
 }
 
 .nav-wrapper {
