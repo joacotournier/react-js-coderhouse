@@ -1,12 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,400&display=swap");
 
-$colorPrimario: rgb(82, 114, 255);
+@font-face {
+  font-family: 'Mexica-BoldSC';
+  src: local('Mexica-BoldSC'), url('./assets/fonts/Mexica-BoldSC.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'AveFedan';
+  src: local('AveFedan'), url('./assets/fonts/AveFedan.ttf') format('truetype');
+}
+
+$colorPrimario: rgb(255, 52, 52);
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
+  text-align: center;
 }
 
 @mixin background() {
@@ -15,15 +26,26 @@ $colorPrimario: rgb(82, 114, 255);
   background-repeat: no-repeat;
 }
 
+#root {
+background-image: url("./assets/textured-wrap.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.items-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 #nav {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: #fff;
   z-index: 10;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,28 +66,24 @@ $colorPrimario: rgb(82, 114, 255);
 
 h1 {
   margin-top: 25px;
+  font-family: 'Mexica-BoldSC', serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #243748;
+}
+h2 {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-family: 'AveFedan', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: $colorPrimario
 }
 
-.logo {
-  width: 100px;
-  height: 30px;
-  background-color: rgb(219, 219, 219);
-  //background-image: url('');
+a {
+  color: #000;
+  text-decoration: none;
 }
-
-#app {
-  nav {
-    background: #fff;
-    ul {
-      li {
-        a {
-          color: #000;
-        }
-      }
-    }
-  }
-}
-
 .cart-wrapper {
   display: flex;
   justify-content: center;

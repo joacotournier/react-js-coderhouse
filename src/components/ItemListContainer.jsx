@@ -27,7 +27,8 @@ export const ItemListContainer = (props) => {
   }
   return (
     <div>
-      <h2>{props.heading}</h2>
+      <h1>{props.heading}</h1>
+      <h2>{props.subheading}</h2>
       <ItemCount stock={5} initial={1} />
       <ItemDetailContainer items={items} />
     </div>

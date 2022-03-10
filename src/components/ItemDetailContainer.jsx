@@ -1,7 +1,7 @@
 import Item from "./ItemDetail";
 export default function ItemDetailContainer({ items }) {
   return (
-    <div>
+    <div class="items-wrapper">
       {items.map((item) => (
         <Item
           title={item.title}

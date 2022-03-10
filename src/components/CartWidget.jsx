@@ -1,9 +1,9 @@
-import ShoppingCart2Fill from "remixicon-react/ShoppingCart2FillIcon";
+import ShoppingBag3LineIcon from "remixicon-react/ShoppingBag3LineIcon";
 
 function CartWidget() {
   return (
     <div className="cart-wrapper">
-      <ShoppingCart2Fill color="#333333" />
+      <ShoppingBag3LineIcon color="#333333" />
     </div>
   );
 }

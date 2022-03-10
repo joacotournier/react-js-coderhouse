@@ -12,8 +12,8 @@ function App() {
       <NavBar />
       <main>
         <Container maxWidth="lg">
-          <ItemListContainer heading="Trending Now" />
-          <button>TREAT YOURSELF</button>
+          <ItemListContainer heading="Kobacán" subheading="Extreme Takeaway" />
+          <button>Treat Yourself</button>
           {/* <Routes>
           <Route path="/" element={<ItemListContainer/>}/>
           <Route path="/categories/:id/" element={<ItemListContainer/>}/>
@@ -25,7 +25,5 @@ function App() {
     </Router>
   );
 }
-
-//catch error use react tostify, con setError como string, y setLoading false en un .finally(()=>{})
 
 export default App;
