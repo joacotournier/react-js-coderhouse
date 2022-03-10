@@ -1,7 +1,6 @@
 import CartWidget from "./CartWidget";
 import Container from "@mui/material/Container";
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 export const NavBar = (props) => {
   return (

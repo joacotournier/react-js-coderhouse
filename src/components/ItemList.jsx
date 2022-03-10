@@ -13,4 +13,4 @@ export default function ItemList({ items }) {
     </div>
   );
 }
-export {ItemList};
+export { ItemList };

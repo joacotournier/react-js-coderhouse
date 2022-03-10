@@ -15,11 +15,11 @@ function App() {
           <ItemListContainer heading="Trending Now" />
           <button>TREAT YOURSELF</button>
           {/* <Routes>
-        <Route path="/" element={<ItemListContainer/>}/>
-        <Route path="/categories/:id/" element={<ItemListContainer/>}/>
-        <Route path="/cart/" element={<CartWidget/>}/>
-        <Route path="/items/:id/" element={<ItemDetailContainer/>}/>
-    </Routes> */}
+          <Route path="/" element={<ItemListContainer/>}/>
+          <Route path="/categories/:id/" element={<ItemListContainer/>}/>
+          <Route path="/cart/" element={<CartWidget/>}/>
+          <Route path="/items/:id/" element={<ItemDetailContainer/>}/>
+          </Routes> */}
         </Container>
       </main>
     </Router>

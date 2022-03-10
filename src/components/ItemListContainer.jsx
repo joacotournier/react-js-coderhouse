@@ -3,10 +3,10 @@ import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ItemCount } from "./ItemCount";
 import { ItemList } from "./ItemList";
+
 export const ItemListContainer = (props) => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const { id } = useParams();
 
   useEffect(async () => {
@@ -18,7 +18,7 @@ export const ItemListContainer = (props) => {
       .then((data) => {
         setItems(data.results);
       })
-      .catch((error) => {
+      .catch(() => {
         toast.error("Error loading items");
       });
   }, []);
