@@ -12,6 +12,7 @@ export default function ItemDetailContainer({ items }) {
           banner={item.banner}
           stock={item.stock}
           category={item.category}
+          highlight={item.highlight}
         />
       ))}
     </div>

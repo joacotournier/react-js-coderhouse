@@ -23,8 +23,8 @@ export const ItemListContainer = (props) => {
     <div>
       <h1>{props.heading}</h1>
       <h2>{props.subheading}</h2>
-      <ItemCount stock={5} initial={1} />
       <ItemDetailContainer items={items} />
+      <ItemCount stock={5} initial={1} />
     </div>
   );
 };

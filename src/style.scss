@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,400&display=swap");
 
 @font-face {
-  font-family: 'Mexica-BoldSC';
-  src: local('Mexica-BoldSC'), url('./assets/fonts/Mexica-BoldSC.otf') format('opentype');
+  font-family: "Mexica-BoldSC";
+  src: local("Mexica-BoldSC"),
+    url("./assets/fonts/Mexica-BoldSC.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'AveFedan';
-  src: local('AveFedan'), url('./assets/fonts/AveFedan.ttf') format('truetype');
+  font-family: "AveFedan";
+  src: local("AveFedan"), url("./assets/fonts/AveFedan.ttf") format("truetype");
 }
 
 $colorPrimario: rgb(255, 52, 52);
@@ -19,7 +20,7 @@ $colorPrimario: rgb(255, 52, 52);
 }
 
 body {
-margin: 0px;
+  margin: 0px;
 }
 
 @mixin background() {
@@ -29,10 +30,10 @@ margin: 0px;
 }
 
 #root {
-background-image: url("./assets/textured-wrap.jpg");
-background-repeat: no-repeat;
-background-position: center center;
-background-size: cover;
+  background-image: url("./assets/textured-wrap.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .bottom-decorator {
@@ -63,6 +64,8 @@ main {
   align-items: center;
   justify-content: center;
   height: 400px;
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
 
 #nav {
@@ -93,7 +96,7 @@ main {
 
 h1 {
   margin-top: 25px;
-  font-family: 'Mexica-BoldSC', serif;
+  font-family: "Mexica-BoldSC", serif;
   font-size: 60px;
   font-weight: bold;
   color: #243748;
@@ -102,17 +105,93 @@ h1 {
 h2 {
   margin-top: -55px;
   margin-bottom: 25px;
-  font-family: 'AveFedan', sans-serif;
+  font-family: "AveFedan", sans-serif;
   font-size: 70px;
   transform: rotate(-5deg);
   font-weight: bold;
-  color: $colorPrimario
+  color: $colorPrimario;
 }
 
 .sauce-img {
- width: 100px;
+  width: 100px;
+  z-index: 2;
 }
 
+.normal-sauce {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 200px;
+  height: 260.28px;
+  background: #ffffff;
+  box-shadow: 0px 4px 44px -20px rgba(0, 0, 0, 0.788);
+  border-radius: 30px;
+  .sauce-effect {
+    display: none;
+  }
+  .sauce-banner {
+    display: none;
+  }
+}
+
+.highlighted-sauce {
+  display: flex;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: flex-end;
+  justify-content: center;
+  width: 612.37px;
+  height: 375.35px;
+  background: #b15050;
+  box-shadow: 0px 4px 44px -20px rgba(0, 0, 0, 0.801);
+  border-radius: 30px;
+  .sauce-effect {
+    position: absolute;
+    mix-blend-mode: screen;
+    height: 100%;
+    border-radius: 30px;
+  }
+  .sauce-banner {
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+  .sauce-img {
+    width: 175px;
+    position: absolute;
+  }
+}
+
+.sauce-banner-content {
+  position: absolute;
+  font-family: Mexica-BoldSC, serif;
+  font-size: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .small {
+    font-size: 20px;
+    margin-top: -5px;
+    margin-bottom: 15px;
+  }
+}
+
+.sauce-banner {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-family: Mexica-BoldSC, serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 a {
   color: #000;
   text-decoration: none;
@@ -121,4 +200,20 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+button {
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 12px 23px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 44px -10px rgba(159, 0, 0, 0.25);
+  border-radius: 11px;
+  font-family: Mexica-BoldSC, serif;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background: #b15050;
+    color: white;
+  }
 }

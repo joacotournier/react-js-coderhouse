@@ -13,7 +13,6 @@ function App() {
       <main>
         <Container maxWidth="lg" style={{zIndex:1}}>
           <ItemListContainer heading="Kobacán" subheading="Extreme Takeaway" />
-          <button>Treat Yourself</button>
           {/* <Routes>
           <Route path="/" element={<ItemListContainer/>}/>
           <Route path="/categories/:id/" element={<ItemListContainer/>}/>

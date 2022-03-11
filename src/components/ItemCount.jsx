@@ -16,8 +16,9 @@ export const ItemCount = (props) => {
   };
   return (
     <div>
-      <button onClick={add}>MÁS</button>
       <button onClick={substract}>MENOS</button>
+      <button>Treat Yourself</button>
+      <button onClick={add}>MÁS</button>
       <p>Count: {count}</p>
       <p>Stock: {stock}</p>
     </div>
