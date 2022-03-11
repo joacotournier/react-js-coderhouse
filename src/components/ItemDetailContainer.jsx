@@ -1,20 +1,19 @@
-import Item from "./ItemDetail";
+import ItemDetail from "./ItemDetail";
+
 export default function ItemDetailContainer({ items }) {
   return (
     <div class="items-wrapper">
-      {items.map((item) => (
-        <Item
-          title={item.title}
-          price={item.price}
-          image={item.image}
-          key={item.id}
-          effect={item.effect}
-          banner={item.banner}
-          stock={item.stock}
-          category={item.category}
-          highlight={item.highlight}
+        <ItemDetail
+          title={items[1].title}
+          price={items[1].price}
+          image={items[1].image}
+          key={items[1].id}
+          effect={items[1].effect}
+          banner={items[1].banner}
+          stock={items[1].stock}
+          category={items[1].category}
+          highlight={items[1].highlight}
         />
-      ))}
     </div>
   );
 }
