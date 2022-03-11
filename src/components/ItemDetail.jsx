@@ -1,4 +1,4 @@
-function Item({ title, price, image, effect, banner, stock, category, highlight }) {
+function ItemDetail({ title, price, image, effect, banner, stock, category, highlight }) {
   return (
     <div class={highlight ? "highlighted-sauce" : "normal-sauce"}>
       <img src={image} alt={title} class="sauce-img" />
@@ -10,4 +10,4 @@ function Item({ title, price, image, effect, banner, stock, category, highlight 
     </div>
   );
 }
-export default Item;
+export default ItemDetail;
