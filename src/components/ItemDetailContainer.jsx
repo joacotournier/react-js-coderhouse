@@ -6,8 +6,12 @@ export default function ItemDetailContainer({ items }) {
         <Item
           title={item.title}
           price={item.price}
-          img={item.thumbnail}
+          image={item.image}
           key={item.id}
+          effect={item.effect}
+          banner={item.banner}
+          stock={item.stock}
+          category={item.category}
         />
       ))}
     </div>

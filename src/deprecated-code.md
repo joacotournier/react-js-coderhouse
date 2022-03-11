@@ -49,3 +49,14 @@ setLoading(false)
 const handleClick = () => {
   console.log("clicked");
 };
+
+----
+
+    fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setItems(data.results.slice(0, 3));
+      })
+      .catch(() => {
+        toast.error("Error loading items");
+      });

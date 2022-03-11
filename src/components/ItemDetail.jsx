@@ -1,9 +1,8 @@
-function Item({ title, price, img }) {
+function Item({ title, price, image, effect, banner, stock, category }) {
   return (
     <div>
-      <span>{title}</span>
       <div>
-        <img src={img} alt={title}></img>
+        <img src={image} alt={title} class="sauce-img"/>
       </div>
       <p>{price}</p>
     </div>

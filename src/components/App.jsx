@@ -11,7 +11,7 @@ function App() {
       <ToastContainer />
       <NavBar />
       <main>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" style={{zIndex:1}}>
           <ItemListContainer heading="Kobacán" subheading="Extreme Takeaway" />
           <button>Treat Yourself</button>
           {/* <Routes>
@@ -21,6 +21,7 @@ function App() {
           <Route path="/items/:id/" element={<ItemDetailContainer/>}/>
           </Routes> */}
         </Container>
+        <div class="bottom-decorator"></div>
       </main>
     </Router>
   );

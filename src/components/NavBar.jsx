@@ -8,9 +8,11 @@ export const NavBar = (props) => {
       <nav id="nav">
         <Container maxWidth="lg">
           <div className="nav-wrapper">
-            <NavLink to="/categories/sauces">Sauces</NavLink>
-            <NavLink to="/categories/chiles">Chiles</NavLink>
-            <NavLink to="/categories/dishes">Dishes</NavLink>
+            <div>
+              <NavLink to="/categories/sauces">Sauces</NavLink>
+              <NavLink to="/categories/chiles">Chiles</NavLink>
+              <NavLink to="/categories/dishes">Dishes</NavLink>
+            </div>
             <CartWidget />
           </div>
         </Container>

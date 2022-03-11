@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { ItemCount } from "./ItemCount";
 import { ItemDetailContainer } from "./ItemDetailContainer";
+import itemsDb from "./ItemsDb";
 
 export const ItemListContainer = (props) => {
   const [items, setItems] = useState([]);
@@ -13,14 +14,7 @@ export const ItemListContainer = (props) => {
     setTimeout(() => {
       setLoading(false);
     }, 2000);
-    fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setItems(data.results.slice(0, 3));
-      })
-      .catch(() => {
-        toast.error("Error loading items");
-      });
+    setItems(itemsDb);
   }, []);
   if (loading) {
     return <p>Loading...</p>;
