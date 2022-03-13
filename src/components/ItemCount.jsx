@@ -9,15 +9,13 @@ export const ItemCount = (props) => {
     stock > 0 && setStock(stock - 1);
     stock < 2 &&
       toast.error(`No more stock available ${String.fromCodePoint(0x1f614)}`);
-    stock < 2 &&
-    onAdd();
+    stock < 2 && onAdd();
   };
   const substract = () => {
     count > 0 && setCount(count - 1);
     count > 0 && setStock(stock + 1);
   };
-  const onAdd = () => {
-  };
+  const onAdd = () => {};
   return (
     <div>
       <button onClick={substract}>MENOS</button>
