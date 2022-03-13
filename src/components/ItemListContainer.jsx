@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { toast } from "react-toastify";
 import { ItemCount } from "./ItemCount";
 import { ItemDetailContainer } from "./ItemDetailContainer";
 import itemsDb from "./ItemsDb";

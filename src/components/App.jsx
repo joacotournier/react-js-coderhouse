@@ -3,26 +3,27 @@ import ItemListContainer from "./ItemListContainer";
 import Container from "@mui/material/Container";
 import { ToastContainer, toast } from "react-toastify";
 import { BrowserRouter as Router, useParams, Link } from "react-router-dom";
-import "react-toastify/dist/ReactToastify.css";
+import {  Routes, Route, BrowserRouter } from "react-router-dom";
+import { CartWidget } from "./CartWidget";
+import { ItemDetailContainer } from "./ItemDetailContainer";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <ToastContainer />
       <NavBar />
       <main>
         <Container maxWidth="lg" style={{zIndex:1}}>
-          <ItemListContainer heading="Kobacán" subheading="Extreme Takeaway" />
-          {/* <Routes>
-          <Route path="/" element={<ItemListContainer/>}/>
-          <Route path="/categories/:id/" element={<ItemListContainer/>}/>
+          <Routes>
+          <Route path="/" element={<ItemListContainer heading="Kobacán" subheading="Extreme Takeaway"/>}/>
+          <Route path="/categories/:id/" element={<ItemListContainer heading="Kobacán" subheading="Extreme Takeaway"/>}/>
           <Route path="/cart/" element={<CartWidget/>}/>
-          <Route path="/items/:id/" element={<ItemDetailContainer/>}/>
-          </Routes> */}
+          <Route path="/items/:id/" element={<ItemDetailContainer heading="Kobacán" subheading="Extreme Takeaway"/>}/>
+          </Routes>
         </Container>
         <div class="bottom-decorator"></div>
       </main>
-    </Router>
+    </BrowserRouter>
   );
 }
 
