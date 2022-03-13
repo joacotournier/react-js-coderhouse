@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemCount } from "./ItemCount";
-import { ItemDetailContainer } from "./ItemDetailContainer";
+import { ItemList } from "./ItemList";
 import itemsDb from "./ItemsDb";
 
 export const ItemListContainer = (props) => {
@@ -22,8 +22,7 @@ export const ItemListContainer = (props) => {
     <div>
       <h1>{props.heading}</h1>
       <h2>{props.subheading}</h2>
-      <ItemDetailContainer items={items} />
-      <ItemCount stock={5} initial={1} />
+      <ItemList items={items} />
     </div>
   );
 };

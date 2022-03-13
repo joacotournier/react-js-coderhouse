@@ -7,7 +7,7 @@ const itemsDb = [
         effect: "/Boom.png",
         banner: "banner.png",
         category: "Sauces",
-        stock: 5,
+        stock: 7,
         highlight: false
     },
     {
@@ -18,8 +18,8 @@ const itemsDb = [
         effect: "/Boom.png",
         banner: "banner.png",
         category: "Sauces",
-        stock: 5,
-        highlight: true
+        stock: 9,
+        highlight: false
     },
     {
         id: 3,
@@ -30,6 +30,50 @@ const itemsDb = [
         banner: "banner.png",
         category: "Sauces",
         stock: 5,
+        highlight: false
+    },
+    {
+        id: 4,
+        title: "Habanero",
+        price: "£2.99",
+        image: "/habanero.png",
+        effect: "/Boom.png",
+        banner: "banner.png",
+        category: "Chiles",
+        stock: 6,
+        highlight: false
+    },
+    {
+        id: 5,
+        title: "Carolina Reapper",
+        price: "£2.99",
+        image: "/carolina.png",
+        effect: "/Boom.png",
+        banner: "banner.png",
+        category: "Chiles",
+        stock: 5,
+        highlight: false
+    },
+    {
+        id: 6,
+        title: "Avocado",
+        price: "£2.99",
+        image: "/avocado.png",
+        effect: "/Boom.png",
+        banner: "banner.png",
+        category: "Make your own",
+        stock: 9,
+        highlight: false
+    },
+    {
+        id: 7,
+        title: "Coriander",
+        price: "£2.99",
+        image: "/coriander.png",
+        effect: "/Boom.png",
+        banner: "banner.png",
+        category: "Make your own",
+        stock: 7,
         highlight: false
     }
 ];
