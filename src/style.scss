@@ -40,7 +40,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 300px;
+  height: 350px;
   background-image: url("./assets/pop-texture.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -62,10 +62,10 @@ main {
 .items-wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   height: 400px;
-  margin-top: 100px;
+  margin-top: 150px;
   margin-bottom: 20px;
 }
 
@@ -145,10 +145,11 @@ h2 {
   position: relative;
   margin-left: 20px;
   margin-right: 20px;
+  margin-bottom: 20px;
   align-items: flex-end;
   justify-content: center;
-  width: 612.37px;
-  height: 375.35px;
+  width: 400px;
+  height: 250px;
   background: #b15050;
   box-shadow: 0px 4px 44px -20px rgba(0, 0, 0, 0.801);
   border-radius: 30px;
@@ -164,8 +165,8 @@ h2 {
     right: 15px;
   }
   .sauce-img {
-    width: 175px;
     position: absolute;
+    height: 360px;
   }
 }
 
