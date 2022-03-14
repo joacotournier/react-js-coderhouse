@@ -21,7 +21,6 @@ function App() {
                 <ItemListContainer
                   heading="Kobacán"
                   subheading="Extreme Takeaway"
-                  filter="all"
                 />
               }
             />
