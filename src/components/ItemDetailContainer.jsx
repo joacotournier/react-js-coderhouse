@@ -42,7 +42,7 @@ export default function ItemDetailContainer({}) {
         banner={itemsDb[1].banner}
         stock={itemsDb[1].stock}
         category={itemsDb[1].category}
-        highlight={itemsDb[1].highlight}
+        highlight={true}
       />
       <ItemCount stock={5} initial={1} />
     </div>

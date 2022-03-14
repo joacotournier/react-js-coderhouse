@@ -114,21 +114,24 @@ h2 {
 }
 
 .sauce-img {
-  width: 100%;
   z-index: 2;
+  height: 300px;
+  pointer-events: none;
 }
 
 .normal-sauce {
   display: flex;
   margin-left: 10px;
   margin-right: 10px;
-  min-width: 150px;
+  height: 250px;
+  min-width: 200px;
   align-items: flex-end;
   justify-content: center;
-  width: 150px;
+  width: 200px;
   background: #ffffff;
   box-shadow: 0px 4px 44px -20px rgba(0, 0, 0, 0.788);
   border-radius: 30px;
+  cursor: pointer;
   .sauce-effect {
     display: none;
   }
