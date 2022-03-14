@@ -1,5 +1,3 @@
-import ItemCount from "./ItemCount";
-
 function ItemDetail({ title, price, image, effect, banner, stock, category, highlight }) {
   return (
     <>
@@ -11,7 +9,6 @@ function ItemDetail({ title, price, image, effect, banner, stock, category, high
         <div class="sauce-banner-content">{stock}{"\n"}<span class="small">Stock</span></div>
       </div>
     </div>
-    <ItemCount stock={stock} initial={0} />
     </>
   );
 }

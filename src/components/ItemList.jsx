@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import ItemDetail from "./ItemDetail";
+import ItemCount from "./ItemCount";
 
 const itemsDb = ItemsDb;
 
@@ -17,7 +18,15 @@ export default function ItemList({}) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
-  const [highlighted, setHighlighted] = useState([false, false, false, false, false, false, false]);
+  const [highlighted, setHighlighted] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
   const getItem = () => {
     return itemsPromise;
   };
@@ -41,18 +50,25 @@ export default function ItemList({}) {
   return (
     <div class="items-wrapper">
       {itemsDb.map((itemsDb, i) => (
-        <div onClick={() => handleClick(i)}>
-          {highlighted[i]?
-            <ItemDetail
-              title={itemsDb.title}
-              price={itemsDb.price}
-              image={itemsDb.image}
-              key={itemsDb.id}
-              effect={itemsDb.effect}
-              banner={itemsDb.banner}
-              stock={itemsDb.stock}
-              category={itemsDb.category}
-            /> : 
+        <div>
+          {highlighted[i] ? (
+            <>
+              <div onClick={() => handleClick(i)}>
+                <ItemDetail
+                  title={itemsDb.title}
+                  price={itemsDb.price}
+                  image={itemsDb.image}
+                  key={itemsDb.id}
+                  effect={itemsDb.effect}
+                  banner={itemsDb.banner}
+                  stock={itemsDb.stock}
+                  category={itemsDb.category}
+                />
+              </div>
+              <ItemCount stock={itemsDb.stock} initial={0} />
+            </>
+          ) : (
+            <div onClick={() => handleClick(i)}>
             <Item
               title={itemsDb.title}
               price={itemsDb.price}
@@ -61,9 +77,10 @@ export default function ItemList({}) {
               effect={itemsDb.effect}
               banner={itemsDb.banner}
               stock={itemsDb.stock}
-              category={itemsDb.category} 
-          />
-          }
+              category={itemsDb.category}
+            />
+            </div>
+          )}
         </div>
       ))}
     </div>
