@@ -1,16 +1,10 @@
 import { useEffect, useState } from "react";
 
 function Item({ title, price, image, effect, banner, stock, category, highlight, id }) {
-  const [highlighted, setHighlighted] = useState(false);
-
-  const highlightItem = () => {
-    setHighlighted(!highlighted);
-  };
 
   return (
     <div
-      className={highlighted ? "highlighted-sauce" : "normal-sauce"}
-      onClick={highlightItem}
+      className={"normal-sauce"}
       id={id}
     >
       <img src={image} alt={title} class="sauce-img" />
