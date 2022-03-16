@@ -46,7 +46,7 @@ function App() {
             />
           </Routes>
         </Container>
-        <div class="bottom-decorator"></div>
+        <div className="bottom-decorator"></div>
       </main>
     </BrowserRouter>
   );
