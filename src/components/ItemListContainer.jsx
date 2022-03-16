@@ -8,7 +8,7 @@ export const ItemListContainer = (props) => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
-  
+
   useEffect(async () => {
     setTimeout(() => {
       setLoading(false);

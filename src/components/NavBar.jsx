@@ -9,7 +9,9 @@ export const NavBar = (props) => {
         <Container maxWidth="lg">
           <div className="nav-wrapper">
             <div className="nav-left">
-            <a href="/"><img class="logo" src="/logo.svg" alt="logo" /></a>
+              <a href="/">
+                <img class="logo" src="/logo.svg" alt="logo" />
+              </a>
               <NavLink to="/categories/sauces">Sauces</NavLink>
               <NavLink to="/categories/chiles">Chiles</NavLink>
               <NavLink to="/categories/groceries">Groceries</NavLink>

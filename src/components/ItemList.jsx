@@ -47,7 +47,6 @@ export default function ItemList(props) {
     setHighlighted(newHighlighted);
   };
 
-  // filter itemsDb by category
   const filteredItems = itemsDb.filter((item) => {
     if (id) {
       return item.category === id;
@@ -77,16 +76,16 @@ export default function ItemList(props) {
             </>
           ) : (
             <div onClick={() => handleClick(i)}>
-            <Item
-              title={itemsDb.title}
-              price={itemsDb.price}
-              image={itemsDb.image}
-              key={itemsDb.id}
-              effect={itemsDb.effect}
-              banner={itemsDb.banner}
-              stock={itemsDb.stock}
-              category={itemsDb.category}
-            />
+              <Item
+                title={itemsDb.title}
+                price={itemsDb.price}
+                image={itemsDb.image}
+                key={itemsDb.id}
+                effect={itemsDb.effect}
+                banner={itemsDb.banner}
+                stock={itemsDb.stock}
+                category={itemsDb.category}
+              />
             </div>
           )}
         </div>
