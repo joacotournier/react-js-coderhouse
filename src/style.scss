@@ -20,7 +20,7 @@ $colorPrimario: rgb(255, 52, 52);
 }
 
 body {
-  margin: 0px;
+  margin: -20px;
 }
 
 @mixin background() {
@@ -49,8 +49,9 @@ body {
 
 main {
   width: 100%;
-  height: 100%;
   min-height: 100vh;
+  margin-top: 0px;
+  padding-top: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +72,7 @@ main {
 
 #nav {
   position: relative;
-  top: 0;
+  top: 20px;
   left: 0;
   width: 100%;
   height: 60px;
@@ -223,4 +224,15 @@ button {
     background: #b15050;
     color: white;
   }
+}
+
+.logo {
+height: 25px;
+margin-right: 5px;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

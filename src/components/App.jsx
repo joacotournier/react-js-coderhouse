@@ -16,7 +16,8 @@ function App() {
       <main>
         <Container maxWidth="lg" style={{ zIndex: 1 }}>
           <Routes>
-            <Route path="/"
+            <Route
+              path="/"
               element={
                 <ItemListContainer
                   heading="Kobacán"
@@ -24,7 +25,8 @@ function App() {
                 />
               }
             />
-            <Route path="/categories/:id/"
+            <Route
+              path="/categories/:id/"
               element={
                 <ItemListContainer
                   heading="Kobacán"
@@ -33,7 +35,15 @@ function App() {
               }
             />
             <Route path="/cart/" element={<CartWidget />} />
-            <Route path="/items/:id/" element={<ItemDetailContainer />} />
+            <Route
+              path="/items/:id/"
+              element={
+                <ItemDetailContainer
+                  heading="Kobacán"
+                  subheading="Extreme Takeaway"
+                />
+              }
+            />
           </Routes>
         </Container>
         <div class="bottom-decorator"></div>

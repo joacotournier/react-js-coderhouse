@@ -11,10 +11,10 @@ const itemsDb = ItemsDb;
 const itemsPromise = new Promise((resolve) => {
   setTimeout(() => {
     resolve(itemsDb);
-  }, 5000);
+  }, 3000);
 });
 
-export default function ItemList({}) {
+export default function ItemList(props) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
@@ -47,9 +47,17 @@ export default function ItemList({}) {
     setHighlighted(newHighlighted);
   };
 
+  // filter itemsDb by category
+  const filteredItems = itemsDb.filter((item) => {
+    if (id) {
+      return item.category === id;
+    }
+    return item;
+  });
+
   return (
     <div class="items-wrapper">
-      {itemsDb.map((itemsDb, i) => (
+      {filteredItems.map((itemsDb, i) => (
         <div>
           {highlighted[i] ? (
             <>

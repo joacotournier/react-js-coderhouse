@@ -8,10 +8,11 @@ export const NavBar = (props) => {
       <nav id="nav">
         <Container maxWidth="lg">
           <div className="nav-wrapper">
-            <div>
+            <div className="nav-left">
+            <a href="/"><img class="logo" src="/logo.svg" alt="logo" /></a>
               <NavLink to="/categories/sauces">Sauces</NavLink>
               <NavLink to="/categories/chiles">Chiles</NavLink>
-              <NavLink to="/categories/dishes">Dishes</NavLink>
+              <NavLink to="/categories/groceries">Groceries</NavLink>
             </div>
             <CartWidget />
           </div>

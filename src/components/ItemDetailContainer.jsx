@@ -13,13 +13,14 @@ const itemsPromise = new Promise((resolve) => {
   }, 5000);
 });
 
-export default function ItemDetailContainer({}) {
+export default function ItemDetailContainer(props) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
   const getItem = () => {
     return itemsPromise;
   };
+
   useEffect(() => {
     getItem()
       .then((data) => getItem(data))
@@ -32,20 +33,24 @@ export default function ItemDetailContainer({}) {
     return <p>Loading...</p>;
   }
   return (
+    <>
+    <h1>{props.heading}</h1>
+    <h2>{props.subheading}</h2>
     <div class="items-wrapper">
       <ItemDetail
-        title={itemsDb[1].title}
-        price={itemsDb[1].price}
-        image={itemsDb[1].image}
-        key={itemsDb[1].id}
-        effect={itemsDb[1].effect}
-        banner={itemsDb[1].banner}
-        stock={itemsDb[1].stock}
-        category={itemsDb[1].category}
+        title={itemsDb[id].title}
+        price={itemsDb[id].price}
+        image={itemsDb[id].image}
+        key={itemsDb[id].id}
+        effect={itemsDb[id].effect}
+        banner={itemsDb[id].banner}
+        stock={itemsDb[id].stock}
+        category={itemsDb[id].category}
         highlight={true}
       />
       <ItemCount stock={5} initial={1} />
     </div>
+    </>
   );
 }
 export { ItemDetailContainer };

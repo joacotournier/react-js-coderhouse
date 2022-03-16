@@ -16,9 +16,9 @@ export const ItemCount = (props) => {
   };
   return (
     <div>
-      <button onClick={substract}>MENOS</button>
+      <img src="../less-circle-fill.svg" onClick={substract}></img>
       <button>Treat Yourself</button>
-      <button onClick={add}>MÁS</button>
+      <img src="../add-circle-fill.svg" onClick={add}></img>
       <p>Count: {count}</p>
       <p>Stock: {stock}</p>
     </div>

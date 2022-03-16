@@ -6,7 +6,7 @@ const itemsDb = [
         image: "/sauce-2.png",
         effect: "/Boom.png",
         banner: "banner.png",
-        category: "Sauces",
+        category: "sauces",
         stock: 7,
         highlight: false
     },
@@ -17,7 +17,7 @@ const itemsDb = [
         image: "/sauce-1.png",
         effect: "/Boom.png",
         banner: "banner.png",
-        category: "Sauces",
+        category: "sauces",
         stock: 9,
         highlight: false
     },
@@ -28,7 +28,7 @@ const itemsDb = [
         image: "/sauce-3.png",
         effect: "/Boom.png",
         banner: "banner.png",
-        category: "Sauces",
+        category: "sauces",
         stock: 5,
         highlight: false
     },
@@ -39,7 +39,7 @@ const itemsDb = [
         image: "/habanero.png",
         effect: "/Boom.png",
         banner: "banner.png",
-        category: "Chiles",
+        category: "chiles",
         stock: 6,
         highlight: false
     },
@@ -50,7 +50,7 @@ const itemsDb = [
         image: "/carolina.png",
         effect: "/Boom.png",
         banner: "banner.png",
-        category: "Chiles",
+        category: "chiles",
         stock: 5,
         highlight: false
     },
@@ -61,7 +61,7 @@ const itemsDb = [
         image: "/avocado.png",
         effect: "/Boom.png",
         banner: "banner.png",
-        category: "Make your own",
+        category: "groceries",
         stock: 9,
         highlight: false
     },
@@ -72,7 +72,7 @@ const itemsDb = [
         image: "/coriander.png",
         effect: "/Boom.png",
         banner: "banner.png",
-        category: "Make your own",
+        category: "groceries",
         stock: 7,
         highlight: false
     }
