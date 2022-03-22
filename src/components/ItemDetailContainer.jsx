@@ -1,6 +1,5 @@
 import ItemDetail from "./ItemDetail";
 import ItemsDb from "./ItemsDb";
-import ItemCount from "./ItemCount";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -49,7 +48,6 @@ export default function ItemDetailContainer(props) {
           category={items[id].category}
           highlight={true}
         />
-        <ItemCount stock={5} initial={1} />
       </section>
     </>
   );
